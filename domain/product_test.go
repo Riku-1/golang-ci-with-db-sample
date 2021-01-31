@@ -22,6 +22,7 @@ func setup() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	db.AutoMigrate(&Product{})
 }
 
 func TestMain(m *testing.M) {
